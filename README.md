@@ -1,7 +1,8 @@
 # QuickPizza API lab
 
 ITDS362 Software Quality Assurance and Testing, API lab v2.0.
-Target: https://quickpizza.grafana.com. Observed on 10 November 2026.
+Target: https://quickpizza.grafana.com. Initial observations: 10 November 2026;
+full suite revalidated: 11 November 2026.
 
 ## Install and run
 
@@ -40,7 +41,7 @@ logged-in user's token. Each non-base case changes one characteristic only.
 | C4 token | wrong length | token short | test_invalid_token_is_refused[wrong-length] |
 
 Base choice: 1+(3-1)+(4-1)+(2-1)+(3-1)=9 cases.
-All combinations of the supplied model: 3*4*2*3=72 cases.
+All combinations of the supplied model: `3 * 4 * 2 * 3 = 72` cases.
 The supplied model is a practical abstraction: C1's numeric value applies when
 stars is numeric, and the model does not enumerate every possible JSON type.
 
