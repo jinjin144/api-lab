@@ -1,0 +1,225 @@
+{
+  "names": {
+    "status": 200,
+    "body": {
+      "names": [
+        "Americana",
+        "Bolognese",
+        "Calzone",
+        "Capricciosa",
+        "Carbonara",
+        "Frutti di Mare",
+        "Funghi",
+        "Fungi e Olive",
+        "Hawaii",
+        "Margherita",
+        "Marinara",
+        "Napoletana",
+        "Prosciutto",
+        "Pugliese",
+        "Quattro Formaggi",
+        "Quattro Stagioni",
+        "Romana",
+        "Siciliana"
+      ]
+    }
+  },
+  "tools_without_token": {
+    "status": 401,
+    "body": {
+      "error": "authentication failed"
+    }
+  },
+  "vegetarian": {
+    "status": 200,
+    "body": {
+      "pizza": {
+        "id": 8200,
+        "name": "The Solid Margherita",
+        "dough": {
+          "ID": 3,
+          "name": "Stuffed",
+          "caloriesPerSlice": 300
+        },
+        "ingredients": [
+          {
+            "ID": 38,
+            "name": "Cherry tomatoes",
+            "caloriesPerSlice": 50,
+            "vegetarian": true
+          },
+          {
+            "ID": 2,
+            "name": "Olive oil",
+            "caloriesPerSlice": 100,
+            "vegetarian": true
+          },
+          {
+            "ID": 5,
+            "name": "Roma tomatoes",
+            "caloriesPerSlice": 50,
+            "vegetarian": true
+          },
+          {
+            "ID": 6,
+            "name": "Mozzarella",
+            "caloriesPerSlice": 100,
+            "vegetarian": true
+          },
+          {
+            "ID": 26,
+            "name": "Zucchini",
+            "caloriesPerSlice": 50,
+            "vegetarian": true
+          },
+          {
+            "ID": 24,
+            "name": "Ricotta cheese",
+            "caloriesPerSlice": 100,
+            "vegetarian": true
+          },
+          {
+            "ID": 35,
+            "name": "Asparagus",
+            "caloriesPerSlice": 50,
+            "vegetarian": true
+          },
+          {
+            "ID": 16,
+            "name": "Green peppers",
+            "caloriesPerSlice": 50,
+            "vegetarian": true
+          }
+        ],
+        "tool": "Pizza cutter"
+      },
+      "calories": 550,
+      "vegetarian": true
+    }
+  },
+  "create_user": {
+    "status": 201,
+    "body_summary": {
+      "keys": [
+        "id",
+        "username"
+      ]
+    }
+  },
+  "own_pizza": {
+    "status": 200,
+    "body": {
+      "pizza": {
+        "id": 8204,
+        "name": "The True Quattro Formaggi",
+        "dough": {
+          "ID": 3,
+          "name": "Stuffed",
+          "caloriesPerSlice": 300
+        },
+        "ingredients": [
+          {
+            "ID": 9,
+            "name": "Pepperoni",
+            "caloriesPerSlice": 100,
+            "vegetarian": false
+          },
+          {
+            "ID": 12,
+            "name": "Sausage",
+            "caloriesPerSlice": 200,
+            "vegetarian": false
+          },
+          {
+            "ID": 33,
+            "name": "Beef",
+            "caloriesPerSlice": 100,
+            "vegetarian": false
+          },
+          {
+            "ID": 22,
+            "name": "Feta cheese",
+            "caloriesPerSlice": 100,
+            "vegetarian": true
+          },
+          {
+            "ID": 18,
+            "name": "Spinach",
+            "caloriesPerSlice": 25,
+            "vegetarian": true
+          },
+          {
+            "ID": 2,
+            "name": "Olive oil",
+            "caloriesPerSlice": 100,
+            "vegetarian": true
+          },
+          {
+            "ID": 3,
+            "name": "San Marzano tomatoes",
+            "caloriesPerSlice": 50,
+            "vegetarian": true
+          },
+          {
+            "ID": 6,
+            "name": "Mozzarella",
+            "caloriesPerSlice": 100,
+            "vegetarian": true
+          }
+        ],
+        "tool": "Knife"
+      },
+      "calories": 775,
+      "vegetarian": false
+    }
+  },
+  "decimal": {
+    "status": 400,
+    "body": {
+      "error": "json: cannot unmarshal number 3.5 into Go struct field Rating.stars of type int"
+    }
+  },
+  "text": {
+    "status": 400,
+    "body": {
+      "error": "json: cannot unmarshal string into Go struct field Rating.stars of type int"
+    }
+  },
+  "missing": {
+    "status": 400,
+    "body": {
+      "error": "number of stars must be between 1 and 5 (inclusive)"
+    }
+  },
+  "nonexistent": {
+    "status": 400,
+    "body": {
+      "error": "pizza ID 999999999 not found"
+    }
+  },
+  "no_token": {
+    "status": 401,
+    "body": {
+      "error": "authentication failed"
+    }
+  },
+  "short_token": {
+    "status": 401,
+    "body": {
+      "error": "authentication failed"
+    }
+  },
+  "all_tools_excluded": {
+    "status": 500,
+    "body": ""
+  },
+  "madeup_read_only": {
+    "status": 200,
+    "body_summary": {
+      "keys": [
+        "ratings"
+      ],
+      "ratings_count": 50
+    }
+  }
+}
